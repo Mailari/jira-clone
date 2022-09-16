@@ -1,0 +1,18 @@
+{
+  "name": "jira",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "pre-commit": "cd api && yarn format && cd ../client && yarn format"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run pre-commit && git add -A ."
+    }
+  },
+  "dependencies": {
+    "husky": "4"
+  },
+  "devDependencies": {}
+}
